@@ -24,7 +24,7 @@
 
 <body>
     <header id="home">
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
@@ -621,7 +621,20 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
     <script type="text/javascript">
-        $('.navbar-nav a').smoothScroll();
+        $('.navbar-nav a').smoothScroll({
+            offset: -120
+        });
+        $(window).scroll(function() {
+            var nav = $('.navbar-default');
+            var top = 100;
+            if ($(window).scrollTop() >= top) {
+
+                nav.addClass('navbar-dark');
+
+            } else {
+                nav.removeClass('navbar-dark');
+            }
+        });
     </script>
 </body>
 

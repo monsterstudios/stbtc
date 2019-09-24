@@ -137,6 +137,14 @@ p>strong {
     background-color: transparent;
 }
 
+.navbar-dark {
+    background: rgba(28, 64, 169, 0.93);
+}
+
+.navbar-dark #navbar-collapse {
+    border: 0;
+}
+
 .navbar-brand {
     display: block;
     height: auto;
@@ -181,7 +189,7 @@ header {
 
 .header-content {
     font-size: 18px;
-    padding: 5% 0 8%;
+    padding: 14% 0 8%;
 }
 
 .header-content a {
